@@ -2,12 +2,13 @@ import React from 'react';
 
 type ButtonPropsType = {
     title: string,
-    callback: () => void
+    callback: () => void,
+    className?: string
 }
 
-export const Button = ({title, callback} : ButtonPropsType) => {
+export const Button = ({title, callback, className} : ButtonPropsType) => {
     return (
-        <button onClick={callback}>{title}</button>
+        <button onClick={callback} className={className}>{title}</button>
     );
 };
 
